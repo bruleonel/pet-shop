@@ -14,7 +14,7 @@ Uncaught SyntaxError: Cannot use import statement outside a module.
 ````ruby
 <script src="./js/app.js" type="module"></script>
 ````
-- Depois disso, caso esteja no visual code garanta que você tenha a extenção live server.
+- Depois disso, caso esteja no visual code garanta que você tenha a extensão live server.
 - Caso esteja em outra IDE, com o node instalado e o npm, dentro do terminal digite os comandos:
 - npm intall -g browser-sync
 
