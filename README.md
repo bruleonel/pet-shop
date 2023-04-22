@@ -186,7 +186,7 @@ const mensagensDeErro = {
 
 - Agora para segunda estapa de verificação de um cpf válido, usaremos a conta que estará explicada no vídeo abaixo do canal Planeta Educação:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/15Bw0duulMQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<link rel="stylesheet" href="https://www.youtube.com/embed/15Bw0duulMQ">
 
 - Depois criamos a função que corresponde a essa explicação:
 
