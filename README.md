@@ -1,3 +1,7 @@
+
+
+![pet-gif](https://user-images.githubusercontent.com/104650333/234009812-aa36f635-92bc-4db1-93e3-e2b3e8706de8.gif)
+
 # Anotações
 
 - Para garantir que o formulario seja preenchido corretamente use o required na tag html;
