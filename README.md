@@ -21,7 +21,7 @@ Uncaught SyntaxError: Cannot use import statement outside a module.
 Caso você não consiga pelo comando anterior por falta de permissão, instale com usuário com os seguinte comando:
 - sudo npm intall -g browser-sync 
 
-Depois:
+Depois execute:
 - browser-sync start -s -f . --directory
 
 Vai aparecer a raiz do seu projeto no navegador...
@@ -186,7 +186,7 @@ const mensagensDeErro = {
 
 - Agora para segunda estapa de verificação de um cpf válido, usaremos a conta que estará explicada no vídeo abaixo do canal Planeta Educação:
 
-<link rel="stylesheet" href="https://www.youtube.com/embed/15Bw0duulMQ">
+<a href="https://www.youtube.com/embed/15Bw0duulMQ" target="_blank">Vídeo</a>
 
 - Depois criamos a função que corresponde a essa explicação:
 
@@ -319,3 +319,39 @@ method: 'GET' é o tipo de requisição que será feita.
 mode: 'cors' indica que a comunicação será feita entre aplicações diferentes.
 
 headers: {'content-type': 'application/json;charset=utf-8'} diz como que queremos receber as informações da API.
+
+## Validando o arquivo cadastrar produto
+
+- Primeiramente é só adicionar o arquivo js e depois adiionar o data-tipo e o required.
+- Depois usaremos o simple mask money que foi desenvolvido por um programador para facilitar nosso trabalho, entre no link abaixo copie o script e cole no html:
+
+<a href="https://github.com/codermarcos/simple-mask-money" target="_blank">Repositório Marcos</a>
+
+<img src="./assets/img-readme/js.png" alt="Print da raiz de um projeto">
+
+OBS.: Houve uma atualização no script:
+
+````ruby
+<script src="https://github.com/codermarcos/simple-mask-money/releases/download/v3.0.0/simple-mask-money.js"></script>
+````
+
+- No arquivo app que faz o retorno do HTML, vamos criar a condição pra o caso do input ser de máscara monetária, adicionaremos a máscara para esse input:
+
+````ruby
+inputs.forEach(input => {
+    if (input.dataset.tipo === 'preco') {
+        SimpleMaskMoney.setMask(input, {
+            prefix: 'R$ ',
+            fixed: true,
+            fractionDigits: 2,
+            decimalSeparator: ',',
+            thousandsSeparator: '.',
+            cursor: 'end'
+        })
+    }
+
+    input.addEventListener('blur', (evento) => {
+        valida(evento.target)
+    })
+})
+````
